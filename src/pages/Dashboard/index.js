@@ -1,14 +1,26 @@
-// import React, { useEffect, useState } from "react";
-// import axios from "axios";
+import React, { useEffect } from "react";
+import axios from "axios";
 import Button from "react-bootstrap/Button";
 import Image from "react-bootstrap/Image";
+
+import { titlePage } from "../../test";
 
 import { ReactComponent as IconPlus } from "../../assets/icon-plus.svg";
 import EmptyActivity from "../../assets/empty-activity.png";
 
 function Dashboard() {
-	document.title = "To Do List - Dashboard";
 	// const [dataTodo, setDataTodo] = useState({});
+
+	useEffect(() => {
+		titlePage({
+			title: "To Do List - Dashboard",
+		});
+
+		axios
+			.get("https://todo.api.devcode.gethired.id/activity-groups?email=ivan@skyshi.com")
+			.then((res) => console.log(res.data));
+		// axios.get("https://floating-mountain-35184.herokuapp.com/activity-groups?email=").then((res) => console.log(res));
+	}, []);
 
 	return (
 		<div className="container">
