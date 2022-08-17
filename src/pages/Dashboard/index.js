@@ -1,11 +1,15 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 import Button from "react-bootstrap/Button";
 import Image from "react-bootstrap/Image";
+
 import { ReactComponent as IconPlus } from "../../assets/icon-plus.svg";
 import EmptyActivity from "../../assets/empty-activity.png";
-// import "./index.css";
 
 function Dashboard() {
+	document.title = "To Do List - Dashboard";
+	const [dataTodo, setDataTodo] = useState({});
+
 	return (
 		<div className="container">
 			<div className="my-5 d-flex justify-content-between">
