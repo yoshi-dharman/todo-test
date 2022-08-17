@@ -3,7 +3,7 @@ import axios from "axios";
 import Button from "react-bootstrap/Button";
 import Image from "react-bootstrap/Image";
 
-import { titlePage } from "../../test";
+// import { titlePage } from "../../test";
 
 import { ReactComponent as IconPlus } from "../../assets/icon-plus.svg";
 import EmptyActivity from "../../assets/empty-activity.png";
