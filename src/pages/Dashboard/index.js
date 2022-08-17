@@ -13,13 +13,15 @@ function Dashboard() {
 
 	useEffect(() => {
 		titlePage({
-			title: "To Do List - Dashboard",
+			title: "To Do List",
 		});
 
 		axios
-			.get("https://todo.api.devcode.gethired.id/activity-groups?email=ivan@skyshi.com")
+			.get("https://todo.api.devcode.gethired.id/activity-groups?email=wow@gmail.com")
+			.then((res) => console.log("data awal, ", res.data));
+		axios
+			.get("https://floating-mountain-35184.herokuapp.com/activity-groups?email=wow@gmail.com")
 			.then((res) => console.log(res.data));
-		// axios.get("https://floating-mountain-35184.herokuapp.com/activity-groups?email=").then((res) => console.log(res));
 	}, []);
 
 	return (
