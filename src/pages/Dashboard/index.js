@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
+// import React, { useEffect, useState } from "react";
+// import axios from "axios";
 import Button from "react-bootstrap/Button";
 import Image from "react-bootstrap/Image";
 
@@ -8,7 +8,7 @@ import EmptyActivity from "../../assets/empty-activity.png";
 
 function Dashboard() {
 	document.title = "To Do List - Dashboard";
-	const [dataTodo, setDataTodo] = useState({});
+	// const [dataTodo, setDataTodo] = useState({});
 
 	return (
 		<div className="container">
