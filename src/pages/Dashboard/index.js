@@ -10,11 +10,12 @@ import EmptyActivity from "../../assets/empty-activity.png";
 
 function Dashboard() {
 	// const [dataTodo, setDataTodo] = useState({});
+	document.title = "To Do List";
 
 	useEffect(() => {
-		titlePage({
-			title: "To Do List",
-		});
+		// titlePage({
+		// 	title: "To Do List",
+		// });
 
 		axios
 			.get("https://todo.api.devcode.gethired.id/activity-groups?email=wow@gmail.com")
