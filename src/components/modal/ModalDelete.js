@@ -27,7 +27,14 @@ function ModalDelete(props) {
 	};
 
 	return (
-		<Modal show={props.show} onHide={props.onHide} size="md" aria-labelledby="contained-modal-title-vcenter" centered>
+		<Modal
+			data-cy="modal-delete"
+			show={props.show}
+			onHide={props.onHide}
+			size="md"
+			aria-labelledby="contained-modal-title-vcenter"
+			centered
+		>
 			<Modal.Header className="border-0 pt-5">
 				<Modal.Title id="contained-modal-title-vcenter" className="m-auto">
 					<IconAlert />
@@ -46,7 +53,7 @@ function ModalDelete(props) {
 					Batal
 				</Button>
 				<Button
-					data-cy="activity-item-delete-button"
+					data-cy="modal-delete-confirm-button"
 					onClick={() => {
 						if (type === "activity") {
 							deleteActivity(id);

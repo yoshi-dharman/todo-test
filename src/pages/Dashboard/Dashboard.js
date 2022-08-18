@@ -67,7 +67,11 @@ function Dashboard() {
 				<Row>
 					{dataTodo.map((item, index) => (
 						<Col xs={12} md={6} lg={3} key={index} className="pb-4">
-							<Activity item={item} deleteActivity={() => deleteActivity(item.id, item.title)} />
+							<Activity
+								data-cy={`activity-item-${index}`}
+								item={item}
+								deleteActivity={() => deleteActivity(item.id, item.title)}
+							/>
 						</Col>
 					))}
 				</Row>
