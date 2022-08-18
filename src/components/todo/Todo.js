@@ -24,7 +24,16 @@ function Todo(props) {
 		};
 
 		updateDataTodo(id, data).then((res) => {
-			getOneData(activity_group_id).then((res) => setDataActivity(res));
+			console.log(res);
+			setDataActivity((prev) => ({
+				...prev,
+				todo_items: prev.todo_items.map((item) => {
+					if (item.id === res.id) {
+						return res;
+					} else return item;
+				}),
+			}));
+			// getOneData(activity_group_id).then((res) => setDataActivity(res));
 		});
 	};
 

@@ -34,7 +34,6 @@ export async function deleteData(id) {
 }
 
 export async function createDataTodo(title, priority, activity_group_id) {
-	console.log(title, priority, activity_group_id);
 	return axios
 		.post(urlTodo, {
 			activity_group_id,
