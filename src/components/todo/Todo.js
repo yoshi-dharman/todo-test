@@ -30,7 +30,7 @@ function Todo(props) {
 
 	return (
 		<Card className="border-0 shadow myCard mb-3 rounded-3">
-			<Card.Body data-cy="todo-item-0" className="d-flex justify-content-between align-items-center">
+			<Card.Body data-cy="todo-item" className="d-flex justify-content-between align-items-center">
 				<div className="d-flex align-items-center">
 					<Form.Check
 						data-cy="todo-item-checkbox"

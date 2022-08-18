@@ -14,8 +14,6 @@ function ModalCreate(props) {
 	const [title, setTitle] = useState("");
 	const [priority, setPriority] = useState("very-high");
 
-	console.log(title);
-
 	const options = [
 		{ value: "very-high", label: "Very High", clr: "red" },
 		{ value: "high", label: "High", clr: "orange" },
@@ -46,7 +44,7 @@ function ModalCreate(props) {
 	const addTodo = (e) => {
 		createDataTodo(title, priority, id).then((res) => {
 			setDataActivity((prev) => ({ ...prev, todo_items: [res, ...prev.todo_items] }));
-			console.log(res);
+			props.onHide();
 		});
 	};
 
