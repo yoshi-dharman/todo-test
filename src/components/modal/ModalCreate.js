@@ -41,7 +41,14 @@ function ModalCreate(props) {
 	};
 
 	return (
-		<Modal show={props.show} onHide={props.onHide} size="lg" aria-labelledby="contained-modal-title-vcenter" centered>
+		<Modal
+			data-cy="modal-add"
+			show={props.show}
+			onHide={props.onHide}
+			size="lg"
+			aria-labelledby="contained-modal-title-vcenter"
+			centered
+		>
 			<Modal.Header className="mt-2 px-4" closeButton>
 				<Modal.Title data-cy="modal-add-title" id="contained-modal-title-vcenter fw-bold">
 					Tambah List Item
@@ -89,6 +96,7 @@ function ModalCreate(props) {
 							</option>
 						</Form.Select> */}
 						<Select
+							data-cy="modal"
 							defaultValue={options[0]}
 							formatOptionLabel={formatOptionLabel}
 							options={options}
@@ -96,7 +104,7 @@ function ModalCreate(props) {
 							onChange={(e) => setPriority(e.value)}
 							id="AddFormPriority"
 							onMouseOver={() => console.log("lagi di atas awan")}
-							components={<IconDropdown className="border-0" />}
+							components={<IconDropdown data-cy="modal-add-priority-dropdown" className="border-0" />}
 						/>
 					</Form.Group>
 				</Form>

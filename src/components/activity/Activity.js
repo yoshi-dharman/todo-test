@@ -14,9 +14,8 @@ function Activity(props) {
 	const options = { year: "numeric", month: "long", day: "numeric" };
 
 	return (
-		<Card className="card-theme border-0 rounded-3 shadow px-2">
+		<Card data-cy="activity-item" className="card-theme border-0 rounded-3 shadow px-2">
 			<Card.Body
-				data-cy="activity-item"
 				className="pointer"
 				onClick={() => {
 					navigate(`/detail/${id}`);
