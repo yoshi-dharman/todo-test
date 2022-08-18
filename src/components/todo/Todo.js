@@ -6,7 +6,7 @@ import "./todo.css";
 import { ReactComponent as IconEditP } from "../../assets/icon-edit-p.svg";
 import { ReactComponent as IconDelete } from "../../assets/icon-delete.svg";
 
-import { getOneData, updateDataTodo } from "../../services/api";
+import { updateDataTodo } from "../../services/api";
 
 function Todo(props) {
 	const { id, activity_group_id, title, is_active, priority } = props.item;
