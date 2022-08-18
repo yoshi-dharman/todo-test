@@ -22,9 +22,14 @@ function Activity(props) {
 					navigate(`/detail/${id}`);
 				}}
 			>
-				<Card.Title className="fw-bolder">{title}</Card.Title>
+				<Card.Title data-cy="activity-item-title" className="fw-bolder">
+					{title}
+				</Card.Title>
 			</Card.Body>
-			<Card.Footer className="border-0 bg-white d-flex align-items-center justify-content-between text-black-50 card-footer mb-3">
+			<Card.Footer
+				data-cy="activity-item-date"
+				className="border-0 bg-white d-flex align-items-center justify-content-between text-black-50 card-footer mb-3"
+			>
 				{date.toLocaleDateString("id", options)}
 				<IconDelete data-cy="activity-item-delete-button" className="pointer" onClick={() => deleteActivity()} />
 			</Card.Footer>
