@@ -44,7 +44,9 @@ function Todo(props) {
 						}}
 					/>
 					<div className={`ball rounded-circle me-4 bg-${priority}`}></div>
-					<div className={`fw-semibold me-4 ${!checked && " text-decoration-line-through"}`}>{title}</div>
+					<div data-cy="todo-item-title" className={`fw-semibold me-4 ${!checked && " text-decoration-line-through"}`}>
+						{title}
+					</div>
 					<IconEditP data-cy="todo-title-edit-button" className="ms-1 pointer" width={24} height={24} />
 				</div>
 

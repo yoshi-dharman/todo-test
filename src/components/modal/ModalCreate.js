@@ -14,6 +14,8 @@ function ModalCreate(props) {
 	const [title, setTitle] = useState("");
 	const [priority, setPriority] = useState("very-high");
 
+	console.log(title);
+
 	const options = [
 		{ value: "very-high", label: "Very High", clr: "red" },
 		{ value: "high", label: "High", clr: "orange" },
@@ -52,7 +54,10 @@ function ModalCreate(props) {
 		<Modal
 			data-cy="modal-add"
 			show={props.show}
-			onHide={props.onHide}
+			onHide={() => {
+				setTitle("");
+				props.onHide();
+			}}
 			size="lg"
 			aria-labelledby="contained-modal-title-vcenter"
 			centered
