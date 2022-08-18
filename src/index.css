@@ -1,8 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Poppins', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: whitesmoke;
@@ -14,7 +14,15 @@ code {
 }
 
 .bg-theme {
-  background-color: rgb(21, 170, 248);
+  background-color: rgb(21, 170, 248) !important;
+}
+
+.bg-red {
+  background-color: rgb(237,76,92) !important;
+}
+
+.bg-gray {
+  background-color: rgb(244,244,244) !important;
 }
 
 .btn-theme{
@@ -24,6 +32,10 @@ code {
   min-width: 150px;
   height: 54px;
   padding: 13px 21px 13px 14px;
+}
+
+.pointer{
+  cursor: pointer;
 }
 
 /* h1, h2, h3, h4, h5 {

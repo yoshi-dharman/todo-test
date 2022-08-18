@@ -7,6 +7,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./index.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
+document.title = "To Do List";
 root.render(
 	<React.StrictMode>
 		<App />

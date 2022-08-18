@@ -1,0 +1,19 @@
+.grid-activity {
+    display: grid;
+    grid-template-columns: 23% 23% 23% 23%;
+    gap: 25px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 480px) {
+    .grid-activity {
+        grid-template-columns: 23%;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 960px) {
+    .grid-activity {
+        grid-template-columns: 23% 23%;
+    }
+}
