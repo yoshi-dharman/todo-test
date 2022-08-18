@@ -1,0 +1,17 @@
+.myCard{
+    height: 80px !important;
+}
+
+.myCheck input{
+    padding: 0.75rem;
+}
+
+.myCheck input:checked{
+    background-color: rgb(21, 170, 248);
+    border-color: rgb(21, 170, 248);
+}
+
+.ball {
+    height: 14px;
+    width: 14px;
+}

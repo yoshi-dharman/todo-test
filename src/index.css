@@ -17,8 +17,24 @@ code {
   background-color: rgb(21, 170, 248) !important;
 }
 
-.bg-red {
+.bg-red, .bg-very-high {
   background-color: rgb(237,76,92) !important;
+}
+
+.bg-orange, .bg-high {
+  background-color: rgb(248,165,64) !important;
+}
+
+.bg-green, .bg-normal {
+  background-color: rgb(1,166,144) !important;
+}
+
+.bg-blue, .bg-low {
+  background-color: rgb(66,139,193) !important;
+}
+
+.bg-purple, .bg-very-low {
+  background-color: rgb(137,66,192) !important;
 }
 
 .bg-gray {
