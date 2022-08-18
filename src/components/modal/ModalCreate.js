@@ -110,7 +110,12 @@ function ModalCreate(props) {
 				</Form>
 			</Modal.Body>
 			<Modal.Footer className="px-4">
-				<Button disabled={title === ""} className="btn-theme bg-theme fw-bold" onClick={() => addTodo()}>
+				<Button
+					data-cy="modal-add-save-button"
+					disabled={title === ""}
+					className="btn-theme bg-theme fw-bold"
+					onClick={() => addTodo()}
+				>
 					Simpan
 				</Button>
 			</Modal.Footer>

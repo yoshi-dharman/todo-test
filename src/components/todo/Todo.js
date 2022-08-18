@@ -33,6 +33,7 @@ function Todo(props) {
 			<Card.Body data-cy="todo-item-0" className="d-flex justify-content-between align-items-center">
 				<div className="d-flex align-items-center">
 					<Form.Check
+						data-cy="todo-item-checkbox"
 						id={`check-api-todo`}
 						className="myCheck me-4"
 						defaultChecked={!checked}
