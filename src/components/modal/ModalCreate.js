@@ -29,6 +29,14 @@ function ModalCreate(props) {
 		</div>
 	);
 
+	const DropdownIndicator = () => {
+		return (
+			<div className="border-0" data-cy="modal-add-priority-dropdown">
+				<IconDropdown />
+			</div>
+		);
+	};
+
 	const changeData = (e) => {
 		setTitle(e.target.value);
 	};
@@ -104,7 +112,7 @@ function ModalCreate(props) {
 							onChange={(e) => setPriority(e.value)}
 							id="AddFormPriority"
 							onMouseOver={() => console.log("lagi di atas awan")}
-							components={<IconDropdown data-cy="modal-add-priority-dropdown" className="border-0" />}
+							components={{ DropdownIndicator }}
 						/>
 					</Form.Group>
 				</Form>
