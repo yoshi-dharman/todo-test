@@ -30,7 +30,8 @@ function Dashboard() {
 
 	const createActivity = (e) => {
 		createData().then((res) => {
-			getAllData().then((res) => setDataTodo(res));
+			setDataTodo((prev) => [res, ...prev]);
+			// getAllData().then((res) => setDataTodo(res));
 		});
 	};
 
