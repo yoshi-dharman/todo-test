@@ -61,7 +61,7 @@ function Dashboard() {
 			</div>
 
 			{dataTodo.length === 0 ? (
-				<div data-cy="activity-empty" className="text-center">
+				<div data-cy="activity-empty-state" className="text-center">
 					<Image fluid src={EmptyActivity} />
 				</div>
 			) : (
