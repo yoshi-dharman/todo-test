@@ -57,7 +57,6 @@ function ItemList() {
 		};
 
 		updateData(id, data).then((res) => {
-			console.log(res);
 			setDataActivity((prev) => ({
 				...prev,
 				title: res.title,
@@ -68,7 +67,11 @@ function ItemList() {
 	return (
 		<Container>
 			<div className="my-5 d-flex justify-content-between">
-				<h1 data-cy="todo-title" className="fw-bolder d-flex align-items-center">
+				<h1
+					data-cy="todo-title"
+					onClick={() => setEditStatus(!editStatus)}
+					className="fw-bolder d-flex align-items-center"
+				>
 					<Link data-cy="todo-back-button" to="/">
 						<IconBack className="me-1 pointer" />
 					</Link>
