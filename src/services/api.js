@@ -33,6 +33,10 @@ export async function deleteData(id) {
 	});
 }
 
+export async function updateData(id, data) {
+	return axios.patch(urlOrigin + id, { ...data }).then((res) => res.data);
+}
+
 export async function createDataTodo(title, priority, activity_group_id) {
 	return axios
 		.post(urlTodo, {
@@ -46,7 +50,7 @@ export async function createDataTodo(title, priority, activity_group_id) {
 }
 
 export async function updateDataTodo(id, data) {
-	return axios.put(urlTodo + id, { ...data }).then((res) => res.data);
+	return axios.patch(urlTodo + id, { ...data }).then((res) => res.data);
 }
 
 export async function deleteDataTodo(id) {

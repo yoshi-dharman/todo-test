@@ -9,22 +9,18 @@ import { ReactComponent as IconDelete } from "../../assets/icon-delete.svg";
 import { updateDataTodo } from "../../services/api";
 
 function Todo(props) {
-	const { id, activity_group_id, title, is_active, priority } = props.item;
+	const { id, title, is_active, priority } = props.item;
 	const { setDataActivity, deleteTodo } = props;
 	const [checked, setChecked] = useState(!!is_active);
 
 	const updateData = (title, checked, priority) => {
 		let data = {
-			activity_group_id,
 			title,
 			priority,
 			is_active: checked ? 0 : 1,
-			created_at: Date.now(),
-			updated_at: Date.now(),
 		};
 
 		updateDataTodo(id, data).then((res) => {
-			console.log(res);
 			setDataActivity((prev) => ({
 				...prev,
 				todo_items: prev.todo_items.map((item) => {

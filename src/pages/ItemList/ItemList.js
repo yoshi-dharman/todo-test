@@ -18,7 +18,7 @@ import ModalCreate from "../../components/modal/ModalCreate";
 import ModalDelete from "../../components/modal/ModalDelete";
 import ModalAlert from "../../components/modal/ModalAlert";
 import Todo from "../../components/todo/Todo";
-import { getOneData } from "../../services/api";
+import { getOneData, updateData } from "../../services/api";
 
 function ItemList() {
 	let { id } = useParams();
@@ -26,6 +26,7 @@ function ItemList() {
 		title: "...",
 		todo_items: [],
 	});
+	// const [loadData, setLoadData] = useState(true);
 	const [modalCreate, setModalCreate] = useState(false);
 	const [modalDelete, setModalDelete] = useState(false);
 	const [modalAlert, setModalAlert] = useState(false);
@@ -50,7 +51,19 @@ function ItemList() {
 		getOneData(id).then((res) => setDataActivity(res));
 	}, [id]);
 
-	// console.log("data aktivity ", dataActivity);
+	const updateDataAction = (title) => {
+		let data = {
+			title,
+		};
+
+		updateData(id, data).then((res) => {
+			console.log(res);
+			setDataActivity((prev) => ({
+				...prev,
+				title: res.title,
+			}));
+		});
+	};
 
 	return (
 		<Container>
@@ -64,6 +77,11 @@ function ItemList() {
 					{editStatus && (
 						<Form>
 							<Form.Control
+								autoFocus
+								onBlur={(e) => {
+									updateDataAction(e.target.value);
+									setEditStatus(!editStatus);
+								}}
 								className=""
 								onChange={(e) => {
 									setDataActivity((prev) => ({ title: e.target.value, ...prev }));
@@ -73,6 +91,21 @@ function ItemList() {
 							/>
 						</Form>
 					)}
+					{/* <div className={editStatus ? "d-none" : ""}>{dataActivity.title}</div>
+					{!loadData && (
+						<Form className={editStatus ? "" : "d-none"}>
+							<Form.Control
+								ref={editBox}
+								onBlur={(e) => console.log("blur", e.target.value)}
+								className=""
+								onChange={(e) => {
+									setDataActivity((prev) => ({ title: e.target.value, ...prev }));
+								}}
+								type="text"
+								value={dataActivity.title}
+							/>
+						</Form>
+					)} */}
 					<IconEditP
 						onClick={() => {
 							setEditStatus(!editStatus);
